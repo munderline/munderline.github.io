@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on Underline</title>
+    <link>https://munderline.github.io/tags/k8s/</link>
+    <description>Recent content in k8s on Underline</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Mon, 27 Apr 2020 14:35:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://munderline.github.io/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>组件原理</title>
+      <link>https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Mon, 27 Apr 2020 14:35:00 +0800</pubDate>
+      
+      <guid>https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</guid>
+      <description>1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制  </description>
+    </item>
+    
+    <item>
+      <title>节点和组件</title>
+      <link>https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/</link>
+      <pubDate>Fri, 24 Apr 2020 18:18:16 +0800</pubDate>
+      
+      <guid>https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/</guid>
+      <description>1. 节点   Master
+ Etcd: APIServer: Scheduler: ControllerManager:    Node
+ Kubelet: KubeProxy: DockerEngie:    2. 组件  Pod: 共享存储和网络 RC(ReplicationController): 确保 Pod 副本达到期望值 RS(ReplicaSet): 功能同 RC 支持基于集合的标签选择器 Deployment: 管理 RC 或者 RS,主要用于部署无状态的应用 StatefulSet: 管理有状态应用程序的工作负载 API 对象 DaemonSet: 和守护进程类似,它在符合匹配条件的节点上均部署一个 Pod ConfigMap: 集中管理配置文件 Secret: 保存敏感信息  3. 存储 </description>
+    </item>
+    
+    <item>
+      <title>命令创建应用</title>
+      <link>https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Fri, 24 Apr 2020 11:30:11 +0800</pubDate>
+      
+      <guid>https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</guid>
+      <description>1. kubectl run 	语法: kubectl run NAME --image=image [--env=&amp;quot;key=value&amp;quot;] [--port=port] [--replicas=replicas] [--dry-run=bool] [--overrides=inline-json] [--command] -- [COMMAND] [args...] [options] kubectl run nginx-deploy --image=nginx:1.17-alpine --port=80 --replicas=1 #创建一个nginx的应用，副本数为1 2. kubectl expose 	语法: kubectl expose (-f FILENAME | TYPE NAME) [--port=port] [--protocol=TCP|UDP] [--target-port=number-or-name] [--name=name] [--external-ip=external-ip-of-service] [--type=type] [options] kubectl expose deployment nginx-deploy --name=nginx --port=80 --target-port=80 --protocol=TCP　#创建一个nginx的service </description>
+    </item>
+    
+  </channel>
+</rss>
