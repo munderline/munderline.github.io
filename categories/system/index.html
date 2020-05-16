@@ -161,19 +161,19 @@
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" class="item">组件原理</a>
+                <a href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" class="item">组件原理</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/" class="item">节点和组件</a>
+                <a href="https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/" class="item">节点和组件</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/" class="item">命令创建应用</a>
+                <a href="https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/" class="item">命令创建应用</a>
               </div>
             </div>
           
@@ -189,7 +189,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/bsd/install_bsd/" class="item">install freebsd</a>
+                <a href="https://munderline.github.io/posts/bsd/install_bsd/" class="item">install freebsd</a>
               </div>
             </div>
           
@@ -280,14 +280,15 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://munderline.github.io/bsd/install_bsd/">install freebsd</a>
+      <a href="https://munderline.github.io/posts/bsd/install_bsd/">install freebsd</a>
     </h2>
     <div class="meta">
       <p class="date">Friday, Apr 24, 2020</p>
       <p class="author">@ 安惪坔</p>
     </div>
     <div class="description">
-      1. 更换国内源 	# 修改用户级pkg源： mkdir -p /usr/local/etc/pkg/repos cat &gt; /usr/local/etc/pkg/repos/FreeBSD.conf &lt;&lt; EOF FreeBSD: { url: &#34;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&#34;, } EOF # 刷新源: pkg update -f # 测试效果: pkg install -y axel # 修改portsnap源: portsnap fetch &amp;&amp; portsnap extract &amp;&amp; portsnap update # 修改ports源: cat &gt; /etc/make.conf &lt;&lt; EOF FETCH_CMD=axel -n 30 -a #-n 30 表示使用30个线程下载 DISABLE_SIZE=yes MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/ EOF # 安装ports升级工具portmaster试试效果: cd /usr/ports/ports-mgmt/portmaster &amp;&amp; make install clean 2. 配置用户权限 	# 在FreeBSD上要使用su命令切换到root用户，默认情况下是无法切换的, # 这是因为 FreeBSD对执行su命令的用户进行了更严格的限制， # 能使用su命令的用户必须属于wheel组(root的基本属组，组ID为0)， # 否则就不能通过 这个命令成为root用户。因此需要编辑组设置文件/etc/group， # 将需要超级用户权力的管理成员加入到wheel组中。 vi /etc/group wheel:*:0:root,isme 注意root与isme用户之间是使用的逗号隔开 # 添加sudo vi /usr/local/etc/sudoers root ALL=(ALL) ALL isme ALL=(ALL) ALL # 添加此行即可 3.
+      安装一下 freebsd 玩玩
+
     </div>
   </div>
 
@@ -327,6 +328,38 @@
 </nav>
 
           <div class="ui centered relaxed grid dream-grid dream-back">
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">关于我</h3>
+        </div>
+        <div class="ui attached segment markdown-body">
+          <p>关于我</p>
+<p>g1eny0ung 的 ❤️ 博客</p>
+<p>记录一些 🌈 生活上，技术上的事</p>
+<p><del>一名大四学生</del></p>
+<p><del>马上</del>（已经）毕业于 🏫 大连东软信息学院</p>
+<p>职业是前端工程师</p>
+<p>业余时间会做开源和 Apple App (OSX &amp; iOS)</p>
+<p>主要的技术栈是：</p>
+<ul>
+<li>JavaScript &amp; TypeScript</li>
+<li>React.js</li>
+<li>Electron</li>
+<li>Rust</li>
+</ul>
+<p>写着玩（写过）：</p>
+<ul>
+<li>Java &amp; Clojure &amp; CLJS</li>
+<li>OCaml &amp; Reason</li>
+<li>Dart &amp; Swift</li>
+</ul>
+<p>目前在 <a href="https://pingcap.com">PingCAP</a> 工作</p>
+<p>&ndash; 2020 年 02 月 02 日更新</p>
+        </div>
+      </article>
+    </section>
   
 
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">

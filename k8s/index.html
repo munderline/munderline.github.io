@@ -285,7 +285,7 @@
       <p class="author">@ 安惪坔</p>
     </div>
     <div class="description">
-      1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制  
+      1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制 
     </div>
   </div>
 
@@ -320,7 +320,7 @@
     <div class="description">
       1. 节点   Master
  Etcd: APIServer: Scheduler: ControllerManager:    Node
- Kubelet: KubeProxy: DockerEngie:    2. 组件  Pod: 共享存储和网络 RC(ReplicationController): 确保 Pod 副本达到期望值 RS(ReplicaSet): 功能同 RC 支持基于集合的标签选择器 Deployment: 管理 RC 或者 RS,主要用于部署无状态的应用 StatefulSet: 管理有状态应用程序的工作负载 API 对象 DaemonSet: 和守护进程类似,它在符合匹配条件的节点上均部署一个 Pod ConfigMap: 集中管理配置文件 Secret: 保存敏感信息  3. 存储 
+ Kubelet: KubeProxy: DockerEngie:   
     </div>
   </div>
 
@@ -353,7 +353,7 @@
       <p class="author">@ 安惪坔</p>
     </div>
     <div class="description">
-      1. kubectl run 	语法: kubectl run NAME --image=image [--env=&#34;key=value&#34;] [--port=port] [--replicas=replicas] [--dry-run=bool] [--overrides=inline-json] [--command] -- [COMMAND] [args...] [options] kubectl run nginx-deploy --image=nginx:1.17-alpine --port=80 --replicas=1 #创建一个nginx的应用，副本数为1 2. kubectl expose 	语法: kubectl expose (-f FILENAME | TYPE NAME) [--port=port] [--protocol=TCP|UDP] [--target-port=number-or-name] [--name=name] [--external-ip=external-ip-of-service] [--type=type] [options] kubectl expose deployment nginx-deploy --name=nginx --port=80 --target-port=80 --protocol=TCP　#创建一个nginx的service 
+      1. kubectl run
     </div>
   </div>
 

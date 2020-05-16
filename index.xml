@@ -14,40 +14,70 @@
     
     <item>
       <title>组件原理</title>
-      <link>https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</link>
+      <link>https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</link>
       <pubDate>Mon, 27 Apr 2020 14:35:00 +0800</pubDate>
       
-      <guid>https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</guid>
-      <description>1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制  </description>
+      <guid>https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</guid>
+      <description>&lt;h1 id=&#34;1-kubernetesapiserver&#34;&gt;1. KubernetesAPIServer&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;(1) 集群管理的API入口
+(2) 资源配额控制的入口
+(3) 提供完备的集群安全机制
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
       <title>节点和组件</title>
-      <link>https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/</link>
+      <link>https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/</link>
       <pubDate>Fri, 24 Apr 2020 18:18:16 +0800</pubDate>
       
-      <guid>https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/</guid>
-      <description>1. 节点   Master
- Etcd: APIServer: Scheduler: ControllerManager:    Node
- Kubelet: KubeProxy: DockerEngie:    2. 组件  Pod: 共享存储和网络 RC(ReplicationController): 确保 Pod 副本达到期望值 RS(ReplicaSet): 功能同 RC 支持基于集合的标签选择器 Deployment: 管理 RC 或者 RS,主要用于部署无状态的应用 StatefulSet: 管理有状态应用程序的工作负载 API 对象 DaemonSet: 和守护进程类似,它在符合匹配条件的节点上均部署一个 Pod ConfigMap: 集中管理配置文件 Secret: 保存敏感信息  3. 存储 </description>
+      <guid>https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/</guid>
+      <description>&lt;h1 id=&#34;1-节点&#34;&gt;1. 节点&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Master&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Etcd:&lt;/li&gt;
+&lt;li&gt;APIServer:&lt;/li&gt;
+&lt;li&gt;Scheduler:&lt;/li&gt;
+&lt;li&gt;ControllerManager:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Node&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Kubelet:&lt;/li&gt;
+&lt;li&gt;KubeProxy:&lt;/li&gt;
+&lt;li&gt;DockerEngie:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>install freebsd</title>
-      <link>https://munderline.github.io/bsd/install_bsd/</link>
+      <link>https://munderline.github.io/posts/bsd/install_bsd/</link>
       <pubDate>Fri, 24 Apr 2020 15:45:08 +0800</pubDate>
       
-      <guid>https://munderline.github.io/bsd/install_bsd/</guid>
-      <description>1. 更换国内源 	# 修改用户级pkg源： mkdir -p /usr/local/etc/pkg/repos cat &amp;gt; /usr/local/etc/pkg/repos/FreeBSD.conf &amp;lt;&amp;lt; EOF FreeBSD: { url: &amp;quot;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&amp;quot;, } EOF # 刷新源: pkg update -f # 测试效果: pkg install -y axel # 修改portsnap源: portsnap fetch &amp;amp;&amp;amp; portsnap extract &amp;amp;&amp;amp; portsnap update # 修改ports源: cat &amp;gt; /etc/make.conf &amp;lt;&amp;lt; EOF FETCH_CMD=axel -n 30 -a #-n 30 表示使用30个线程下载 DISABLE_SIZE=yes MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/ EOF # 安装ports升级工具portmaster试试效果: cd /usr/ports/ports-mgmt/portmaster &amp;amp;&amp;amp; make install clean 2. 配置用户权限 	# 在FreeBSD上要使用su命令切换到root用户，默认情况下是无法切换的, # 这是因为 FreeBSD对执行su命令的用户进行了更严格的限制， # 能使用su命令的用户必须属于wheel组(root的基本属组，组ID为0)， # 否则就不能通过 这个命令成为root用户。因此需要编辑组设置文件/etc/group， # 将需要超级用户权力的管理成员加入到wheel组中。 vi /etc/group wheel:*:0:root,isme 注意root与isme用户之间是使用的逗号隔开 # 添加sudo vi /usr/local/etc/sudoers root ALL=(ALL) ALL isme ALL=(ALL) ALL # 添加此行即可 3.</description>
+      <guid>https://munderline.github.io/posts/bsd/install_bsd/</guid>
+      <description>&lt;p&gt;安装一下 freebsd 玩玩&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>命令创建应用</title>
-      <link>https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</link>
+      <link>https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</link>
       <pubDate>Fri, 24 Apr 2020 11:30:11 +0800</pubDate>
       
-      <guid>https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</guid>
-      <description>1. kubectl run 	语法: kubectl run NAME --image=image [--env=&amp;quot;key=value&amp;quot;] [--port=port] [--replicas=replicas] [--dry-run=bool] [--overrides=inline-json] [--command] -- [COMMAND] [args...] [options] kubectl run nginx-deploy --image=nginx:1.17-alpine --port=80 --replicas=1 #创建一个nginx的应用，副本数为1 2. kubectl expose 	语法: kubectl expose (-f FILENAME | TYPE NAME) [--port=port] [--protocol=TCP|UDP] [--target-port=number-or-name] [--name=name] [--external-ip=external-ip-of-service] [--type=type] [options] kubectl expose deployment nginx-deploy --name=nginx --port=80 --target-port=80 --protocol=TCP　#创建一个nginx的service </description>
+      <guid>https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/</guid>
+      <description>&lt;h1 id=&#34;1-kubectl-run&#34;&gt;1. kubectl run&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>https://munderline.github.io/about/me/</link>
+      <pubDate>Mon, 11 Nov 2019 01:30:25 +0800</pubDate>
+      
+      <guid>https://munderline.github.io/about/me/</guid>
+      <description>&lt;p&gt;关于我&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -56,7 +86,9 @@
       <pubDate>Fri, 18 May 2018 16:41:08 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/</guid>
-      <description>1. 结构体的初始化 - 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.  2. 运算符 - 后缀运算符: 后缀++, 后缀--, 结构体取成员., 数组取下标[], 函数调用() - 前缀运算符: 前缀++, 前缀--, 正号+, 负号-, 逻辑非!. - 优先级: 后缀运算符优先级最高,单目运算符的优先级仅次于后缀运算符.  3. 数组 - 数组不能相互赋值或初始化 - 既然不能相互赋值,也就不能用数组类型作为函数的参数或返回值 - 数组类型做右值使用时,自动转换成指向数组首元素的指针.  4. 预处理 - 可用命令gcc -E filename 或 cpp filename 进行预处理操作 - 把头文件(如stdio.h)在代码中展开 - 把#define中定义的标识符N替换成它定义的内容  </description>
+      <description>&lt;h1 id=&#34;1-结构体的初始化&#34;&gt;1. 结构体的初始化&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;- 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -65,8 +97,7 @@
       <pubDate>Thu, 17 May 2018 16:41:08 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/first/</guid>
-      <description>这座城市的风很大，孤独的人总是很晚才回家 “与其在等待中枯萎，不如在行动中绽放。”拆掉思维里的墙，让我们创造新的人生。
-时间这个东西，会把我们想要的都慢慢带来，残酷的是，它也会把我们不想失去的东西渐渐带走。 终有一天,你将长成想要的样子! …好几天没更新了 布吉岛怎么把自己的 key 给搞丢了 23333, 快被自己蠢哭了 不开心，终于有时间从 debian 迁移到了 win2012</description>
+      <description>&lt;h1 id=&#34;这座城市的风很大孤独的人总是很晚才回家&#34;&gt;这座城市的风很大，孤独的人总是很晚才回家&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -75,7 +106,7 @@
       <pubDate>Thu, 17 May 2018 16:41:08 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/clang-%E6%95%B0%E7%BB%84/</guid>
-      <description>1. 一维数组 - 定义 [存储类型] 数据类型 标识符 [下标] eg: int arr[5] - 初始化 不初始化: 地址连续,值随机 全部初始化: int arr[3] = {1, 2, 3} 部分初始化: 未初始化部分值为0, int arr[5] = {1, 2, 3} static: 值全为0, static int arr[4] - 元素引用 数组名[下标] - 数组名 数组名是表示地址的常量,也是数组的起始位置. - 数组越界  2. 二维数组 - 定义,初始化 [存储类型] 数组类型 标识符 [行下标] [列下标] - 元素引用 - 存储形式 - 深入理解二维数组  3. 字符数组 </description>
+      <description>&lt;h1 id=&#34;1-一维数组&#34;&gt;1. 一维数组&lt;/h1&gt;</description>
     </item>
     
   </channel>

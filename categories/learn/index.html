@@ -161,19 +161,19 @@
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" class="item">组件原理</a>
+                <a href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" class="item">组件原理</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/" class="item">节点和组件</a>
+                <a href="https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/" class="item">节点和组件</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/" class="item">命令创建应用</a>
+                <a href="https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/" class="item">命令创建应用</a>
               </div>
             </div>
           
@@ -189,7 +189,7 @@
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/bsd/install_bsd/" class="item">install freebsd</a>
+                <a href="https://munderline.github.io/posts/bsd/install_bsd/" class="item">install freebsd</a>
               </div>
             </div>
           
@@ -280,14 +280,14 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://munderline.github.io/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/">组件原理</a>
+      <a href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/">组件原理</a>
     </h2>
     <div class="meta">
       <p class="date">Monday, Apr 27, 2020</p>
       <p class="author">@ 安惪坔</p>
     </div>
     <div class="description">
-      1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制  
+      1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制 
     </div>
   </div>
 
@@ -313,7 +313,7 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://munderline.github.io/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/">节点和组件</a>
+      <a href="https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/">节点和组件</a>
     </h2>
     <div class="meta">
       <p class="date">Friday, Apr 24, 2020</p>
@@ -322,7 +322,7 @@
     <div class="description">
       1. 节点   Master
  Etcd: APIServer: Scheduler: ControllerManager:    Node
- Kubelet: KubeProxy: DockerEngie:    2. 组件  Pod: 共享存储和网络 RC(ReplicationController): 确保 Pod 副本达到期望值 RS(ReplicaSet): 功能同 RC 支持基于集合的标签选择器 Deployment: 管理 RC 或者 RS,主要用于部署无状态的应用 StatefulSet: 管理有状态应用程序的工作负载 API 对象 DaemonSet: 和守护进程类似,它在符合匹配条件的节点上均部署一个 Pod ConfigMap: 集中管理配置文件 Secret: 保存敏感信息  3. 存储 
+ Kubelet: KubeProxy: DockerEngie:   
     </div>
   </div>
 
@@ -348,14 +348,14 @@
 
   <div class="content">
     <h2 class="ui medium header">
-      <a href="https://munderline.github.io/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/">命令创建应用</a>
+      <a href="https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/">命令创建应用</a>
     </h2>
     <div class="meta">
       <p class="date">Friday, Apr 24, 2020</p>
       <p class="author">@ 安惪坔</p>
     </div>
     <div class="description">
-      1. kubectl run 	语法: kubectl run NAME --image=image [--env=&#34;key=value&#34;] [--port=port] [--replicas=replicas] [--dry-run=bool] [--overrides=inline-json] [--command] -- [COMMAND] [args...] [options] kubectl run nginx-deploy --image=nginx:1.17-alpine --port=80 --replicas=1 #创建一个nginx的应用，副本数为1 2. kubectl expose 	语法: kubectl expose (-f FILENAME | TYPE NAME) [--port=port] [--protocol=TCP|UDP] [--target-port=number-or-name] [--name=name] [--external-ip=external-ip-of-service] [--type=type] [options] kubectl expose deployment nginx-deploy --name=nginx --port=80 --target-port=80 --protocol=TCP　#创建一个nginx的service 
+      1. kubectl run
     </div>
   </div>
 
@@ -395,6 +395,38 @@
 </nav>
 
           <div class="ui centered relaxed grid dream-grid dream-back">
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">关于我</h3>
+        </div>
+        <div class="ui attached segment markdown-body">
+          <p>关于我</p>
+<p>g1eny0ung 的 ❤️ 博客</p>
+<p>记录一些 🌈 生活上，技术上的事</p>
+<p><del>一名大四学生</del></p>
+<p><del>马上</del>（已经）毕业于 🏫 大连东软信息学院</p>
+<p>职业是前端工程师</p>
+<p>业余时间会做开源和 Apple App (OSX &amp; iOS)</p>
+<p>主要的技术栈是：</p>
+<ul>
+<li>JavaScript &amp; TypeScript</li>
+<li>React.js</li>
+<li>Electron</li>
+<li>Rust</li>
+</ul>
+<p>写着玩（写过）：</p>
+<ul>
+<li>Java &amp; Clojure &amp; CLJS</li>
+<li>OCaml &amp; Reason</li>
+<li>Dart &amp; Swift</li>
+</ul>
+<p>目前在 <a href="https://pingcap.com">PingCAP</a> 工作</p>
+<p>&ndash; 2020 年 02 月 02 日更新</p>
+        </div>
+      </article>
+    </section>
   
 
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">

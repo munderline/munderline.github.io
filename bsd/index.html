@@ -285,7 +285,8 @@
       <p class="author">@ 安惪坔</p>
     </div>
     <div class="description">
-      1. 更换国内源 	# 修改用户级pkg源： mkdir -p /usr/local/etc/pkg/repos cat &gt; /usr/local/etc/pkg/repos/FreeBSD.conf &lt;&lt; EOF FreeBSD: { url: &#34;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&#34;, } EOF # 刷新源: pkg update -f # 测试效果: pkg install -y axel # 修改portsnap源: portsnap fetch &amp;&amp; portsnap extract &amp;&amp; portsnap update # 修改ports源: cat &gt; /etc/make.conf &lt;&lt; EOF FETCH_CMD=axel -n 30 -a #-n 30 表示使用30个线程下载 DISABLE_SIZE=yes MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/ EOF # 安装ports升级工具portmaster试试效果: cd /usr/ports/ports-mgmt/portmaster &amp;&amp; make install clean 2. 配置用户权限 	# 在FreeBSD上要使用su命令切换到root用户，默认情况下是无法切换的, # 这是因为 FreeBSD对执行su命令的用户进行了更严格的限制， # 能使用su命令的用户必须属于wheel组(root的基本属组，组ID为0)， # 否则就不能通过 这个命令成为root用户。因此需要编辑组设置文件/etc/group， # 将需要超级用户权力的管理成员加入到wheel组中。 vi /etc/group wheel:*:0:root,isme 注意root与isme用户之间是使用的逗号隔开 # 添加sudo vi /usr/local/etc/sudoers root ALL=(ALL) ALL isme ALL=(ALL) ALL # 添加此行即可 3.
+      安装一下 freebsd 玩玩
+
     </div>
   </div>
 

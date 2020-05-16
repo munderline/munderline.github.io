@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-c 简单总结
+install freebsd
 </title>
 
     
@@ -13,31 +13,28 @@ c 简单总结
 
   
   <meta name="author" content="安惪坔" />
-  <meta name="description" content="1. 结构体的初始化 - 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样. " />
+  <meta name="description" content="安装一下 freebsd 玩玩
+" />
 
 
 
 <meta name="generator" content="Hugo 0.70.0" />
 
-<link rel="canonical" href="https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/" />
+<link rel="canonical" href="https://munderline.github.io/posts/bsd/install_bsd/" />
 
 
-<meta property="og:title" content="c 简单总结" />
-<meta property="og:description" content="1. 结构体的初始化
-- 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.
-" />
+<meta property="og:title" content="install freebsd" />
+<meta property="og:description" content="安装一下 freebsd 玩玩" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/" />
-<meta property="article:published_time" content="2018-05-18T16:41:08+08:00" />
-<meta property="article:modified_time" content="2018-05-19T16:41:08+08:00" />
+<meta property="og:url" content="https://munderline.github.io/posts/bsd/install_bsd/" />
+<meta property="article:published_time" content="2020-04-24T15:45:08+08:00" />
+<meta property="article:modified_time" content="2020-04-24T15:45:08+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="c 简单总结"/>
-<meta name="twitter:description" content="1. 结构体的初始化
-- 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.
-"/>
+<meta name="twitter:title" content="install freebsd"/>
+<meta name="twitter:description" content="安装一下 freebsd 玩玩"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -89,34 +86,84 @@ c 简单总结
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          c 简单总结
-          <div class="sub header">@ 安惪坔 · Friday, May 18, 2018 · 1 ·  May 19, 2018</div>
+          install freebsd
+          <div class="sub header">@ 安惪坔 · Friday, Apr 24, 2020 · 1 ·  Apr 24, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><h1 id="1-结构体的初始化">1. 结构体的初始化</h1>
-<pre><code>- 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.
-</code></pre>
-<h1 id="2-运算符">2. 运算符</h1>
-<pre><code>- 后缀运算符: 后缀++, 后缀--, 结构体取成员., 数组取下标[], 函数调用()
-- 前缀运算符: 前缀++, 前缀--, 正号+, 负号-, 逻辑非!.
-- 优先级: 后缀运算符优先级最高,单目运算符的优先级仅次于后缀运算符.
-</code></pre>
-<h1 id="3-数组">3. 数组</h1>
-<pre><code>- 数组不能相互赋值或初始化
-- 既然不能相互赋值,也就不能用数组类型作为函数的参数或返回值
-- 数组类型做右值使用时,自动转换成指向数组首元素的指针.
-</code></pre>
-<h1 id="4-预处理">4. 预处理</h1>
-<pre><code>- 可用命令gcc -E filename 或 cpp filename 进行预处理操作
-- 把头文件(如stdio.h)在代码中展开
-- 把#define中定义的标识符N替换成它定义的内容
+      <article style="margin-top: 2rem;"><p>安装一下 freebsd 玩玩</p>
+<h1 id="1-更换国内源">1. 更换国内源</h1>
+<pre><code>	# 修改用户级pkg源：
+	mkdir -p /usr/local/etc/pkg/repos
+	cat &gt; /usr/local/etc/pkg/repos/FreeBSD.conf &lt;&lt; EOF
+	FreeBSD: {
+  url: &quot;pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&quot;,
+	}
+	EOF
+	# 刷新源:
+	pkg update -f
+	# 测试效果:
+	pkg install -y axel
+
+	# 修改portsnap源:
+	portsnap fetch &amp;&amp; portsnap extract &amp;&amp; portsnap update
+
+	# 修改ports源:
+	cat &gt; /etc/make.conf &lt;&lt; EOF
+  FETCH_CMD=axel -n 30 -a 　　 #-n 30 表示使用30个线程下载
+  DISABLE_SIZE=yes
+	MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+	EOF
+	# 安装ports升级工具portmaster试试效果:
+	cd /usr/ports/ports-mgmt/portmaster &amp;&amp; make install clean
+</code></pre><h1 id="2-配置用户权限">2. 配置用户权限</h1>
+<pre><code>	# 在FreeBSD上要使用su命令切换到root用户，默认情况下是无法切换的,
+	# 这是因为 FreeBSD对执行su命令的用户进行了更严格的限制，
+	# 能使用su命令的用户必须属于wheel组(root的基本属组，组ID为0)，
+	# 否则就不能通过 这个命令成为root用户。因此需要编辑组设置文件/etc/group，
+	# 将需要超级用户权力的管理成员加入到wheel组中。
+	vi /etc/group
+	wheel:*:0:root,isme 注意root与isme用户之间是使用的逗号隔开
+	# 添加sudo
+	vi /usr/local/etc/sudoers
+	root ALL=(ALL) ALL
+	isme ALL=(ALL) ALL # 添加此行即可
+</code></pre><h1 id="3-配置-x">3. 配置 X</h1>
+<pre><code>	# base tools
+	pkg install -y git neovim neofetch feh picom
+	# install about x
+	pkg install -y xorg/xorg-minimal xrdb libXft libXinerama libX11
+	# 核显(intel)
+	pkg install xf86-video-intel
+	# A卡和N卡
+  A卡: pkg install -y xf86-video-ati
+	N卡: pkg install nvidia-driver
+	# 要想使freebsd开机能自动装载显卡驱动，需要修改/boot/loader.conf文件。
+	# 添加nvidia_load=&quot;YES&quot; 到/boot/loader.conf
+	# install fonts
+	pkg install wqy-fonts
+
+	# install dwm and st
+	pkg install -y pkgconf dmenu
+	# 修改config.mk(in dwm and st)文件
+	X11INC = /usr/local/include
+	X11LIB = /usr/local/lib
+	FREETYPEINC = /usr/local/include/freetype2
+
+	# 安装输入法
+	pkg install -y zh-fcitx-configtool zh-fcitx
+	# cat .xinitrc
+	export XMODIFIERS='@im=fcitx'
+	export GTK_IM_MODULE=fcitx
+	export GTK3_IM_MODULE=xim
+	fcitx &amp;
+	dwm &amp;
 </code></pre></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="/tags/clang" title="clang">clang</a>
+          <a class="ui label" href="/tags/freebsd" title="freebsd">freebsd</a>
         
       
       <div
