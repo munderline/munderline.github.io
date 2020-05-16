@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-
-
-   | freebsd
-
-
-
-
+Posts
 </title>
 
     
@@ -19,25 +13,25 @@
 
   
   <meta name="author" content="Underline" />
-  <meta name="description" content="这个世界我曾经来过" />
+  <meta name="description" content="" />
 
 
 
 <meta name="generator" content="Hugo 0.70.0" />
 
-<link rel="canonical" href="https://munderline.github.io/tags/freebsd/" />
+<link rel="canonical" href="https://munderline.github.io/posts/" />
 
 
-<meta property="og:title" content="freebsd" />
+<meta property="og:title" content="Posts" />
 <meta property="og:description" content="这个世界我曾经来过" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://munderline.github.io/tags/freebsd/" />
-<meta property="og:updated_time" content="2020-04-24T15:45:08+08:00" />
+<meta property="og:url" content="https://munderline.github.io/posts/" />
+<meta property="og:updated_time" content="2018-05-18T16:41:08+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="freebsd"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="这个世界我曾经来过"/>
 
 
@@ -85,7 +79,7 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -265,50 +259,35 @@
 </article>
 
   </div>
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
+    <div class="ui segment dream-posts-section">
+      <h2 class="ui header">
+        Posts
+        <div class="ui grey sub header"></div>
+      </h2>
 
-  
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
       
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
-    
-      <img src="https://cdn.stocksnap.io/img-thumbs/280h/EOOISMLDWS.jpg" alt="install freebsd" />
-    
-  </div>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="https://munderline.github.io/bsd/install_bsd/">install freebsd</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Friday, Apr 24, 2020</p>
-      <p class="author">@ 安惪坔</p>
-    </div>
-    <div class="description">
-      1. 更换国内源 	# 修改用户级pkg源： mkdir -p /usr/local/etc/pkg/repos cat &gt; /usr/local/etc/pkg/repos/FreeBSD.conf &lt;&lt; EOF FreeBSD: { url: &#34;pkg&#43;http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest&#34;, } EOF # 刷新源: pkg update -f # 测试效果: pkg install -y axel # 修改portsnap源: portsnap fetch &amp;&amp; portsnap extract &amp;&amp; portsnap update # 修改ports源: cat &gt; /etc/make.conf &lt;&lt; EOF FETCH_CMD=axel -n 30 -a #-n 30 表示使用30个线程下载 DISABLE_SIZE=yes MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/ EOF # 安装ports升级工具portmaster试试效果: cd /usr/ports/ports-mgmt/portmaster &amp;&amp; make install clean 2. 配置用户权限 	# 在FreeBSD上要使用su命令切换到root用户，默认情况下是无法切换的, # 这是因为 FreeBSD对执行su命令的用户进行了更严格的限制， # 能使用su命令的用户必须属于wheel组(root的基本属组，组ID为0)， # 否则就不能通过 这个命令成为root用户。因此需要编辑组设置文件/etc/group， # 将需要超级用户权力的管理成员加入到wheel组中。 vi /etc/group wheel:*:0:root,isme 注意root与isme用户之间是使用的逗号隔开 # 添加sudo vi /usr/local/etc/sudoers root ALL=(ALL) ALL isme ALL=(ALL) ALL # 添加此行即可 3.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1
-    </a>
-  </div>
-</article>
+        <h3 class="ui header">2018</h3>
+        <ul>
+          
+            <li>
+              <a href="https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/">c 简单总结</a>
+            </li>
+          
+            <li>
+              <a href="https://munderline.github.io/posts/clang-%E6%95%B0%E7%BB%84/">数组</a>
+            </li>
+          
+            <li>
+              <a href="https://munderline.github.io/posts/first/">First One</a>
+            </li>
+          
+        </ul>
+      
 
     </div>
-  
+  </div>
 </div>
-
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
-
 
         </section>
         <section class="back">

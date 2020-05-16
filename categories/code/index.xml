@@ -14,19 +14,19 @@
     
     <item>
       <title>c 简单总结</title>
-      <link>https://munderline.github.io/post/%E7%BB%93%E6%9E%84%E4%BD%93/</link>
+      <link>https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/</link>
       <pubDate>Fri, 18 May 2018 16:41:08 +0800</pubDate>
       
-      <guid>https://munderline.github.io/post/%E7%BB%93%E6%9E%84%E4%BD%93/</guid>
+      <guid>https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/</guid>
       <description>1. 结构体的初始化 - 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.  2. 运算符 - 后缀运算符: 后缀++, 后缀--, 结构体取成员., 数组取下标[], 函数调用() - 前缀运算符: 前缀++, 前缀--, 正号+, 负号-, 逻辑非!. - 优先级: 后缀运算符优先级最高,单目运算符的优先级仅次于后缀运算符.  3. 数组 - 数组不能相互赋值或初始化 - 既然不能相互赋值,也就不能用数组类型作为函数的参数或返回值 - 数组类型做右值使用时,自动转换成指向数组首元素的指针.  4. 预处理 - 可用命令gcc -E filename 或 cpp filename 进行预处理操作 - 把头文件(如stdio.h)在代码中展开 - 把#define中定义的标识符N替换成它定义的内容  </description>
     </item>
     
     <item>
       <title>数组</title>
-      <link>https://munderline.github.io/post/clang-%E6%95%B0%E7%BB%84/</link>
+      <link>https://munderline.github.io/posts/clang-%E6%95%B0%E7%BB%84/</link>
       <pubDate>Thu, 17 May 2018 16:41:08 +0800</pubDate>
       
-      <guid>https://munderline.github.io/post/clang-%E6%95%B0%E7%BB%84/</guid>
+      <guid>https://munderline.github.io/posts/clang-%E6%95%B0%E7%BB%84/</guid>
       <description>1. 一维数组 - 定义 [存储类型] 数据类型 标识符 [下标] eg: int arr[5] - 初始化 不初始化: 地址连续,值随机 全部初始化: int arr[3] = {1, 2, 3} 部分初始化: 未初始化部分值为0, int arr[5] = {1, 2, 3} static: 值全为0, static int arr[4] - 元素引用 数组名[下标] - 数组名 数组名是表示地址的常量,也是数组的起始位置. - 数组越界  2. 二维数组 - 定义,初始化 [存储类型] 数组类型 标识符 [行下标] [列下标] - 元素引用 - 存储形式 - 深入理解二维数组  3. 字符数组 </description>
     </item>
     
