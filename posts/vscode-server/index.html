@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-关于我
+Template
 </title>
 
     
 
 
   
-  <meta name="author" content="Underline" />
-  <meta name="description" content="这个世界我曾经来过" />
+  <meta name="author" content="安惪坔" />
+  <meta name="description" content="安装 server 版 vscode" />
 
 
 
 <meta name="generator" content="Hugo 0.71.1" />
 
-<link rel="canonical" href="https://munderline.github.io/about/me/" />
+<link rel="canonical" href="https://munderline.github.io/posts/vscode-server/" />
 
 
-<meta property="og:title" content="关于我" />
-<meta property="og:description" content="一只肥宅,丑女,又宅又丑&hellip;" />
+<meta property="og:title" content="Template" />
+<meta property="og:description" content="安装 server 版 vscode" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://munderline.github.io/about/me/" />
-<meta property="article:published_time" content="2018-11-11T01:30:25+08:00" />
-<meta property="article:modified_time" content="2020-05-16T17:37:24+08:00" />
+<meta property="og:url" content="https://munderline.github.io/posts/vscode-server/" />
+<meta property="article:published_time" content="2018-06-06T14:15:08+08:00" />
+<meta property="article:modified_time" content="2018-06-06T14:15:08+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="关于我"/>
-<meta name="twitter:description" content="一只肥宅,丑女,又宅又丑&hellip;"/>
+<meta name="twitter:title" content="Template"/>
+<meta name="twitter:description" content="安装 server 版 vscode"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -85,18 +85,57 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          关于我
-          <div class="sub header">@ Underline · Sunday, Nov 11, 2018 · 1 ·  May 16, 2020</div>
+          Template
+          <div class="sub header">@ 安惪坔 · Wednesday, Jun 6, 2018 · 1 ·  Jun 6, 2018</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>一只肥宅,丑女,又宅又丑&hellip;</p>
-<h3 id="毕业院校-白马书院">毕业院校: 白马书院</h3>
-<h3 id="家庭住址-大荒山无稽崖斜月三星洞">家庭住址: 大荒山无稽崖斜月三星洞</h3></article>
+      <article style="margin-top: 2rem;"><h1 id="安装-server-版-vscode">安装 server 版 vscode</h1>
+<h1 id="1-直接上-docker-compose">1. 直接上 docker-compose</h1>
+<pre><code>version: '3'
+services:
+  vscode:
+    container_name: vscode
+    hostname: anywhere
+    image: codercom/code-server:latest
+    volumes:
+    # - &quot;./work:/home/coder/project&quot;
+      - &quot;work:/home/coder&quot;
+      - &quot;/etc/localtime:/etc/localtime:ro&quot;
+		# 国内服务器最好换下源
+    # sed -i 's#http://deb.debian.org#https://mirrors.163.com#g' /etc/apt/sources.list
+    environment:
+		  # web登录时候需要输入的密码
+      - PASSWORD=fuck
+   #ports:
+   #  - &quot;8080:8080&quot;
+    networks:
+      nginx_imnet:
+        ipv4_address: 10.10.10.250
+
+volumes:
+  work:
+    driver: local
+# 引用自定义网络,可不设置
+networks:
+  nginx_imnet:
+      external: true
+</code></pre><h1 id="2-配置-nginx-反代">2. 配置 nginx 反代</h1>
+<pre><code>    location /Ncode/ {
+            proxy_set_header Host $host;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection upgrade;
+            proxy_set_header Accept-Encoding gzip;
+						# 此处是docker的内部地址,因为我的nginx也跑在docker中
+            proxy_pass    http://10.10.10.250:8080/;
+    }
+</code></pre></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
-          <a class="ui label"></a>
+        
+          <a class="ui label" href="/tags/vscode" title="vscode">vscode</a>
+        
       
       <div
         class="ui label"
@@ -120,8 +159,8 @@
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/munderline.github.io\/about\/me\/';  
-            this.page.identifier = '\/about\/me\/'; 
+            this.page.url = 'https:\/\/munderline.github.io\/posts\/vscode-server\/';  
+            this.page.identifier = '\/posts\/vscode-server\/'; 
           };
 
           (function() { 
@@ -424,30 +463,6 @@
 
   
   
-    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-      <footer class="ui segment">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/munderline.github.io\/about\/me\/about';  
-            this.page.identifier = '/about'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'underline' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    </section>
-  
-
 </div>
 
         </section>
