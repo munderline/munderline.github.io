@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-Template
+code-server
 </title>
 
     
@@ -22,7 +22,7 @@ Template
 <link rel="canonical" href="https://munderline.github.io/posts/vscode-server/" />
 
 
-<meta property="og:title" content="Template" />
+<meta property="og:title" content="code-server" />
 <meta property="og:description" content="安装 server 版 vscode" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://munderline.github.io/posts/vscode-server/" />
@@ -32,7 +32,7 @@ Template
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Template"/>
+<meta name="twitter:title" content="code-server"/>
 <meta name="twitter:description" content="安装 server 版 vscode"/>
 
 
@@ -85,7 +85,7 @@ Template
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          Template
+          code-server
           <div class="sub header">@ 安惪坔 · Wednesday, Jun 6, 2018 · 1 ·  Jun 6, 2018</div>
         </h2>
       </header>
@@ -120,7 +120,11 @@ networks:
   nginx_imnet:
       external: true
 </code></pre><h1 id="2-配置-nginx-反代">2. 配置 nginx 反代</h1>
-<pre><code>    location /Ncode/ {
+<pre><code>	server {
+		listen 80;
+		listen [::]:80;
+		server_name code.example.com code.example.org;
+    location /code/ {
             proxy_set_header Host $host;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection upgrade;
@@ -128,7 +132,8 @@ networks:
 						# 此处是docker的内部地址,因为我的nginx也跑在docker中
             proxy_pass    http://10.10.10.250:8080/;
     }
-</code></pre></article>
+	}
+</code></pre><h1 id="3-打开浏览器享受-anywhere-模式">3. 打开浏览器,享受 anywhere 模式</h1></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -297,7 +302,7 @@ networks:
           
             <div class="item">
               <div class="content">
-                <a href="https://munderline.github.io/posts/vscode-server/" class="item">Template</a>
+                <a href="https://munderline.github.io/posts/vscode-server/" class="item">code-server</a>
               </div>
             </div>
           
