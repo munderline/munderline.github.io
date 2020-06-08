@@ -108,6 +108,8 @@ install-pmos
 </code></pre><h1 id="4-flash-刷入根文件系统">4. flash 刷入根文件系统</h1>
 <pre><code># 此过程一般不超过2分钟
 	pmbootstrap flasher flash_rootfs
+# 如果你的系统分区较小的话,可以使用下面的命令,这会将系统安装到用户数据分区
+	pmbootstrap flasher flash_rootfs --partition userdata
 </code></pre><h1 id="4-flash-刷入内核">4. flash 刷入内核</h1>
 <pre><code># 以下方法而选一,建议第一种,第一种刷完自动重启,第二种需要手动重启
 	pmbootstrap flasher boot
