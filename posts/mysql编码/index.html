@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-组件原理
+mariadb 编码
 </title>
 
     
@@ -13,35 +13,27 @@
 
   
   <meta name="author" content="安惪坔" />
-  <meta name="description" content="1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制 " />
+  <meta name="description" content="解决 mariadb 中文乱码的问题" />
 
 
 
 <meta name="generator" content="Hugo 0.71.1" />
 
-<link rel="canonical" href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" />
+<link rel="canonical" href="https://munderline.github.io/posts/mysql%E7%BC%96%E7%A0%81/" />
 
 
-<meta property="og:title" content="组件原理" />
-<meta property="og:description" content="1. KubernetesAPIServer
-(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
-" />
+<meta property="og:title" content="mariadb 编码" />
+<meta property="og:description" content="解决 mariadb 中文乱码的问题" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" />
-<meta property="article:published_time" content="2020-04-27T14:35:00+08:00" />
-<meta property="article:modified_time" content="2020-04-27T14:35:00+08:00" />
+<meta property="og:url" content="https://munderline.github.io/posts/mysql%E7%BC%96%E7%A0%81/" />
+<meta property="article:published_time" content="2020-06-10T11:36:08+08:00" />
+<meta property="article:modified_time" content="2020-06-10T11:41:08+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="组件原理"/>
-<meta name="twitter:description" content="1. KubernetesAPIServer
-(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
-"/>
+<meta name="twitter:title" content="mariadb 编码"/>
+<meta name="twitter:description" content="解决 mariadb 中文乱码的问题"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -93,21 +85,87 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          组件原理
-          <div class="sub header">@ 安惪坔 · Monday, Apr 27, 2020 · 1 ·  Apr 27, 2020</div>
+          mariadb 编码
+          <div class="sub header">@ 安惪坔 · Wednesday, Jun 10, 2020 · 1 ·  Jun 10, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><h1 id="1-kubernetesapiserver">1. KubernetesAPIServer</h1>
-<pre><code>(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
+      <article style="margin-top: 2rem;"><h1 id="解决-mariadb-中文乱码的问题">解决 mariadb 中文乱码的问题</h1>
+<h1 id="参考httpsblogcsdnnetdaijiguoarticledetails78102622"><a href="https://blog.csdn.net/daijiguo/article/details/78102622"><strong>参考</strong></a></h1>
+<h1 id="1-首先创建数据库的时候就设定-utf8-编码create-database-dbname-charsetutf8">1. 首先创建数据库的时候就设定 utf8 编码<code>create database dbname charset=utf8</code></h1>
+<h1 id="2-查看-msyql-中库的编码格式">2. 查看 msyql 中库的编码格式</h1>
+<pre><code># 连接数据库
+mysql -uroot -ppassword dbname
+# 查看编码格式
+show variables like 'character%';
+
+# 输出
+MariaDB [blog]&gt; show variables like 'character%';
++--------------------------+----------------------------+
+| Variable_name            | Value                      |
++--------------------------+----------------------------+
+| character_set_client     | latin1                     |
+| character_set_connection | latin1                     |
+| character_set_database   | utf8                       |
+| character_set_filesystem | binary                     |
+| character_set_results    | latin1                     |
+| character_set_server     | latin1                     |
+| character_set_system     | utf8                       |
+| character_sets_dir       | /usr/share/mysql/charsets/ |
++--------------------------+----------------------------+
+8 rows in set (0.001 sec)
+
+# character_set_client为客户端编码方式；
+# character_set_connection为建立连接使用的编码；character_set_database数据库的编码；
+# character_set_results结果集的编码；
+# character_set_server数据库服务器的编码；
+# 只要保证以上四个采用的编码方式一样，就不会出现乱码问题。
+**注意**: 已建的库和表，编码不会改变。如果在已有库中继续建表，表依然会继承来自库的过去使用的编码
+
+</code></pre><h1 id="3-修改所有编码格式都为-utf8">3. 修改所有编码格式都为 utf8</h1>
+<pre><code>[mysqld]
+default-time-zone='+8:00'
+lower_case_table_names=1
+log-error=/var/log/mysql/log-error.log
+default-storage-engine = innodb
+innodb_file_per_table
+max_connections = 4096
+
+collation-server = utf8_general_ci
+# 数据库服务器的编码
+character-set-server = utf8
+
+[client]
+# 客户端编码方式
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+</code></pre><h1 id="4-重启-mariadb-服务再次查看编码格式搞定">4. 重启 mariadb 服务,再次查看编码格式,搞定</h1>
+<pre><code># 查看编码格式
+show variables like 'character%';
+
+# 输出
+MariaDB [blog]&gt; show variables like 'character%';
++--------------------------+----------------------------+
+| Variable_name            | Value                      |
++--------------------------+----------------------------+
+| character_set_client     | utf8                       |
+| character_set_connection | utf8                       |
+| character_set_database   | utf8                       |
+| character_set_filesystem | binary                     |
+| character_set_results    | utf8                       |
+| character_set_server     | utf8                       |
+| character_set_system     | utf8                       |
+| character_sets_dir       | /usr/share/mysql/charsets/ |
++--------------------------+----------------------------+
+8 rows in set (0.001 sec)
 </code></pre></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
       
         
-          <a class="ui label" href="/tags/k8s" title="k8s">k8s</a>
+          <a class="ui label" href="/tags/mysql" title="mysql">mysql</a>
         
       
       <div
@@ -132,8 +190,8 @@
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/munderline.github.io\/posts\/k8s\/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86\/';  
-            this.page.identifier = '\/posts\/k8s\/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86\/'; 
+            this.page.url = 'https:\/\/munderline.github.io\/posts\/mysql%E7%BC%96%E7%A0%81\/';  
+            this.page.identifier = '\/posts\/mysql%E7%BC%96%E7%A0%81\/'; 
           };
 
           (function() { 

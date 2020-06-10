@@ -5,43 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-组件原理
+
+
+
+
+   | sql
+
+
 </title>
 
     
 
 
   
-  <meta name="author" content="安惪坔" />
-  <meta name="description" content="1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制 " />
+  <meta name="author" content="Underline" />
+  <meta name="description" content="这个世界我曾经来过" />
 
 
 
 <meta name="generator" content="Hugo 0.71.1" />
 
-<link rel="canonical" href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" />
+<link rel="canonical" href="https://munderline.github.io/categories/sql/" />
 
 
-<meta property="og:title" content="组件原理" />
-<meta property="og:description" content="1. KubernetesAPIServer
-(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" />
-<meta property="article:published_time" content="2020-04-27T14:35:00+08:00" />
-<meta property="article:modified_time" content="2020-04-27T14:35:00+08:00" />
+<meta property="og:title" content="sql" />
+<meta property="og:description" content="这个世界我曾经来过" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://munderline.github.io/categories/sql/" />
+<meta property="og:updated_time" content="2020-06-10T11:41:08+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="组件原理"/>
-<meta name="twitter:description" content="1. KubernetesAPIServer
-(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
-"/>
+<meta name="twitter:title" content="sql"/>
+<meta name="twitter:description" content="这个世界我曾经来过"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -88,67 +85,7 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
-
-    <section class="ui top attached segment" id="dream-save-post-as-img">
-      <header style="margin-top: 0 !important;">
-        <h2 class="ui header">
-          组件原理
-          <div class="sub header">@ 安惪坔 · Monday, Apr 27, 2020 · 1 ·  Apr 27, 2020</div>
-        </h2>
-      </header>
-      <article style="margin-top: 2rem;"><h1 id="1-kubernetesapiserver">1. KubernetesAPIServer</h1>
-<pre><code>(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
-</code></pre></article>
-    </section>
-
-    <footer class="ui attached segment dream-tags">
-      
-        
-          <a class="ui label" href="/tags/k8s" title="k8s">k8s</a>
-        
-      
-      <div
-        class="ui label"
-        style="float: right; background: #1b1c1d !important; cursor: pointer;"
-        onclick="savePostAsImg()">
-        <i class="save icon"></i> Save as image
-      </div>
-    </footer>
-
-    
-      <footer class="ui attached segment">
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
-      </footer>
-    
-
-    
-      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore="true">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/munderline.github.io\/posts\/k8s\/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86\/';  
-            this.page.identifier = '\/posts\/k8s\/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86\/'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'underline' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    
-
-  </div>
-  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -378,7 +315,50 @@
 </article>
 
   </div>
+
+  
+  
+    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      
+<article class="ui raised card dream-card" style="box-shadow: none;">
+
+  <div class="image">
+    
+      <img src="https://cdn.stocksnap.io/img-thumbs/960w/aerial-beach_ECUAQEXTPV.jpg" alt="mariadb 编码" />
+    
+  </div>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="https://munderline.github.io/posts/mysql%E7%BC%96%E7%A0%81/">mariadb 编码</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Wednesday, Jun 10, 2020</p>
+      <p class="author">@ 安惪坔</p>
+    </div>
+    <div class="description">
+      解决 mariadb 中文乱码的问题
+    </div>
+  </div>
+
+  <div class="extra content">
+    <a>
+      <i class="clock icon"></i>
+      1
+    </a>
+  </div>
+</article>
+
+    </div>
+  
 </div>
+
+<div class="ui secondary menu dream-menu dream-paginator">
+  
+
+  
+</div>
+
 
         </section>
         <section class="back">
@@ -468,6 +448,30 @@
 
   
   
+    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
+      <footer class="ui segment">
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/munderline.github.io\/categories\/sql\/about';  
+            this.page.identifier = '/about'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'underline' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    </section>
+  
+
 </div>
 
         </section>
