@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Underline</title>
+    <link>https://munderline.github.io/categories/vim/</link>
+    <description>Recent content in vim on Underline</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
+    <lastBuildDate>Mon, 27 Jul 2020 14:15:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://munderline.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vim配置go插件</title>
+      <link>https://munderline.github.io/posts/gobyvim/</link>
+      <pubDate>Mon, 27 Jul 2020 14:15:08 +0800</pubDate>
+      
+      <guid>https://munderline.github.io/posts/gobyvim/</guid>
+      <description>&lt;h1 id=&#34;使用vim写golang&#34;&gt;使用vim写golang&lt;/h1&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
