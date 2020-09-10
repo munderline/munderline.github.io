@@ -4,22 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-
-
-
-
-   | learn
-
-
-</title>
+    <title>learn | Underline</title>
 
     
 
 
-  
-  <meta name="author" content="Underline" />
-  <meta name="description" content="这个世界我曾经来过" />
+
+<meta name="author" content="Underline" />
+<meta name="description" content="这个世界我曾经来过" />
 
 
 
@@ -41,8 +33,9 @@
 <meta name="twitter:description" content="这个世界我曾经来过"/>
 
 
-<link rel="stylesheet" href="/css/github-markdown.css" />
 <link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
 <link rel="stylesheet" href="/css/site.css" />
 
 
@@ -61,15 +54,22 @@
 </style>
 
 
+
+<style>
+  body {
+    
+    
+      background-image: url(/img/bg.gif);
+    
+  }
+</style>
+
+
+     
   </head>
 
-  
-  <body style="background-image: url(/img/bg.gif);">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
+  <body>
+    
 <nav class="ui secondary inverted menu dream-menu">
 
   <div class="item">
@@ -81,9 +81,18 @@
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
   </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
 </nav>
 
-          
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
 <div class="ui centered relaxed grid dream-grid">
   <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
     <article class="dream-header">
@@ -94,8 +103,10 @@
       
     </div>
 
-    <h1 class="ui medium header">Underline<div class="sub header" style="margin-top: 0.5rem;">一只肥宅啊</div>
-    </h1>
+    
+    <div class="ui medium header">Underline<div class="sub header" style="margin-top: 0.5rem;">一只肥宅啊</div>
+    </div>
+    
 
     <div class="ui horizontal list">
       
@@ -142,180 +153,192 @@
   <section class="ui attached segment dream-categories">
     <div class="ui accordion">
       
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/code" class="item">code</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/" class="item">c 简单总结</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/clang-%E6%95%B0%E7%BB%84/" class="item">数组</a>
-              </div>
-            </div>
-          
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/code" class="item">code</a>
           </div>
-        </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E7%BB%93%E6%9E%84%E4%BD%93/" class="item">c 简单总结</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/clang-%E6%95%B0%E7%BB%84/" class="item">数组</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/learn" class="item">learn</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" class="item">组件原理</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/" class="item">节点和组件</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/" class="item">命令创建应用</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/linux" class="item">linux</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/fail2ban/" class="item">Centos7 install fail2ban</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/sql" class="item">sql</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pgsql/" class="item">PGSQL 断电恢复</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/mysql%E7%BC%96%E7%A0%81/" class="item">mariadb 编码</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/system" class="item">system</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/bsd/bsd_config/" class="item">freebsd config</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/frp-php/" class="item">当frp遇上php</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pmos-config/" class="item">config-pmos</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pmos/" class="item">install-pmos</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/bsd/install_bsd/" class="item">install freebsd</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/vim" class="item">vim</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/gobyvim/" class="item">vim配置go插件</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+
       
         <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/learn" class="item">learn</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/" class="item">组件原理</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/" class="item">节点和组件</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/" class="item">命令创建应用</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/linux" class="item">linux</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/fail2ban/" class="item">Centos7 install fail2ban</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/sql" class="item">sql</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/pgsql/" class="item">PGSQL 断电恢复</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/mysql%E7%BC%96%E7%A0%81/" class="item">mariadb 编码</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/system" class="item">system</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/bsd/bsd_config/" class="item">freebsd config</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/frp-php/" class="item">当frp遇上php</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/pmos-config/" class="item">config-pmos</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/pmos/" class="item">install-pmos</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/bsd/install_bsd/" class="item">install freebsd</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/vim" class="item">vim</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/gobyvim/" class="item">vim配置go插件</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/vscode" class="item">vscode</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/vscode-server/" class="item">code-server</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E4%B8%80%E4%BA%9B%E4%BA%BA%E4%B8%80%E4%BA%9B%E4%BA%8B" class="item">一些人一些事</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://munderline.github.io/posts/first/" class="item">First One</a>
-              </div>
-            </div>
-          
-          </div>
+          <a class="item" href="/categories" style="padding-left: 0.5rem;">......</a>
         </div>
       
     </div>
@@ -325,9 +348,10 @@
   <section class="ui attached segment header-socials">
     <nav class="ui secondary menu dream-menu dream-socials">
   
+  
     <div class="item">
       <a href="mailto:vip170706@gmail.com">
-        <i class=" mail icon" title="email"></i>
+        <i class=" mail icon" title="Email"></i>
       </a>
     </div>
   
@@ -343,7 +367,7 @@
   
     <div class="item">
       <a href="https://github.com/munderline" target="_blank">
-        <i class=" github icon" title="github"></i>
+        <i class=" github icon" title="GitHub"></i>
       </a>
     </div>
   
@@ -351,7 +375,7 @@
   
     <div class="item">
       <a href="https://www.stackoverflow.com/users/10953110/underline" target="_blank">
-        <i class=" stack overflow icon" title="stackoverflow"></i>
+        <i class=" stack overflow icon" title="StackOverflow"></i>
       </a>
     </div>
   
@@ -367,6 +391,8 @@
     
 
     <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+
+    
   </section>
 </article>
 
@@ -375,25 +401,38 @@
   
   
     <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/">
     
       <img src="https://cdn.stocksnap.io/img-thumbs/280h/frozen-tree_9Q47FZGCHX.jpg" alt="组件原理" />
     
-  </div>
+  </a>
 
   <div class="content">
     <h2 class="ui medium header">
       <a href="https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/">组件原理</a>
     </h2>
     <div class="meta">
-      <p class="date">Monday, Apr 27, 2020</p>
-      <p class="author">@ 安惪坔</p>
+      <p class="date">
+        
+          Monday, Apr 27, 2020
+        
+      </p>
+      <p class="author">
+        @
+        
+          
+            安惪坔
+          
+        
+      </p>
     </div>
     <div class="description">
-      1. KubernetesAPIServer (1) 集群管理的API入口 (2) 资源配额控制的入口 (3) 提供完备的集群安全机制 
+      <h1 id="1-kubernetesapiserver">1. KubernetesAPIServer</h1>
+<pre><code>(1) 集群管理的API入口
+(2) 资源配额控制的入口
+(3) 提供完备的集群安全机制
+</code></pre>
     </div>
   </div>
 
@@ -408,27 +447,53 @@
     </div>
   
     <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/">
     
       <img src="https://cdn.stocksnap.io/img-thumbs/960w/Paddy%20field-Sunset_EPBYVX1ELL.jpg" alt="节点和组件" />
     
-  </div>
+  </a>
 
   <div class="content">
     <h2 class="ui medium header">
       <a href="https://munderline.github.io/posts/k8s/%E8%8A%82%E7%82%B9%E5%92%8C%E7%BB%84%E4%BB%B6/">节点和组件</a>
     </h2>
     <div class="meta">
-      <p class="date">Friday, Apr 24, 2020</p>
-      <p class="author">@ 安惪坔</p>
+      <p class="date">
+        
+          Friday, Apr 24, 2020
+        
+      </p>
+      <p class="author">
+        @
+        
+          
+            安惪坔
+          
+        
+      </p>
     </div>
     <div class="description">
-      1. 节点   Master
- Etcd: APIServer: Scheduler: ControllerManager:    Node
- Kubelet: KubeProxy: DockerEngie:   
+      <h1 id="1-节点">1. 节点</h1>
+<ul>
+<li>
+<p>Master</p>
+<ul>
+<li>Etcd:</li>
+<li>APIServer:</li>
+<li>Scheduler:</li>
+<li>ControllerManager:</li>
+</ul>
+</li>
+<li>
+<p>Node</p>
+<ul>
+<li>Kubelet:</li>
+<li>KubeProxy:</li>
+<li>DockerEngie:</li>
+</ul>
+</li>
+</ul>
     </div>
   </div>
 
@@ -443,25 +508,34 @@
     </div>
   
     <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card" style="box-shadow: none;">
-
-  <div class="image">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/">
     
       <img src="https://cdn.stocksnap.io/img-thumbs/960w/ocean-sunset_AF7XRMDINN.jpg" alt="命令创建应用" />
     
-  </div>
+  </a>
 
   <div class="content">
     <h2 class="ui medium header">
       <a href="https://munderline.github.io/posts/k8s/%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8/">命令创建应用</a>
     </h2>
     <div class="meta">
-      <p class="date">Friday, Apr 24, 2020</p>
-      <p class="author">@ 安惪坔</p>
+      <p class="date">
+        
+          Friday, Apr 24, 2020
+        
+      </p>
+      <p class="author">
+        @
+        
+          
+            安惪坔
+          
+        
+      </p>
     </div>
     <div class="description">
-      1. kubectl run
+      <h1 id="1-kubectl-run">1. kubectl run</h1>
     </div>
   </div>
 
@@ -475,45 +549,22 @@
 
     </div>
   
+
+  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+
+
+
+  </div>
 </div>
 
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
-
-
+          </div>
         </section>
         <section class="back">
-          
-<nav class="ui secondary inverted menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title=""></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="" onclick="window.location.href = 'https:\/\/munderline.github.io\/'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
   
-    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      <article>
-        <div class="ui top attached segment">
-          <h3 class="ui header">关于我</h3>
-        </div>
-        <div class="ui attached segment markdown-body">
-          <p>一只肥宅,丑女,又宅又丑&hellip;</p>
-<h3 id="毕业院校-白马书院">毕业院校: 白马书院</h3>
-<h3 id="家庭住址-大荒山无稽崖斜月三星洞">家庭住址: 大荒山无稽崖斜月三星洞</h3>
-        </div>
-      </article>
-    </section>
+  
   
 
   <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
@@ -521,12 +572,13 @@
       <div class="ui top attached segment">
         <h3 class="ui header"></h3>
       </div>
-      <div class="ui attached segment">
+      <div class="ui bottom attached segment">
         <nav class="ui secondary menu dream-menu dream-socials">
+  
   
     <div class="item">
       <a href="mailto:vip170706@gmail.com">
-        <i class="large mail icon" title="email"></i>
+        <i class="large mail icon" title="Email"></i>
       </a>
     </div>
   
@@ -542,7 +594,7 @@
   
     <div class="item">
       <a href="https://github.com/munderline" target="_blank">
-        <i class="large github icon" title="github"></i>
+        <i class="large github icon" title="GitHub"></i>
       </a>
     </div>
   
@@ -550,7 +602,7 @@
   
     <div class="item">
       <a href="https://www.stackoverflow.com/users/10953110/underline" target="_blank">
-        <i class="large stack overflow icon" title="stackoverflow"></i>
+        <i class="large stack overflow icon" title="StackOverflow"></i>
       </a>
     </div>
   
@@ -571,48 +623,78 @@
   </section>
 
   
+    
+      <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
+        <footer class="ui segment">
+          <div id="disqus_thread"></div>
+          <script>
+            
+
+
+            var disqus_config = function () {
+              this.page.url = 'https:\/\/munderline.github.io\/categories\/learn\/';  
+              this.page.identifier = '/'; 
+            };
+
+            (function() { 
+              var d = document, s = d.createElement('script');
+              s.src = 'https://' + 'underline' + '.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </footer>
+      </section>
+    
   
-    <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-      <footer class="ui segment">
-        <div id="disqus_thread"></div>
-        <script>
-          
-
-
-          var disqus_config = function () {
-            this.page.url = 'https:\/\/munderline.github.io\/categories\/learn\/about';  
-            this.page.identifier = '/about'; 
-          };
-
-          (function() { 
-            var d = document, s = d.createElement('script');
-            s.src = 'https://' + 'underline' + '.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </footer>
-    </section>
-  
-
 </div>
 
+          </div>
         </section>
       </div>
     </div>
 
-    <script src="/js/jquery.min.js"></script>
+    <script>
+  window.darkNav =  true 
+</script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/semantic.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<script src="/js/nav.js"></script>
+<script src="/js/jquery.overlayScrollbars.min.js"></script>
 <script src="/js/header.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/theme.js"></script>
-<script src="/js/html2canvas.min.js"></script>
+
+    
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/grid.js"></script>
 
 
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/munderline.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
 
+    
+
+    
   </body>
 </html>
