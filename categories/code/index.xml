@@ -14,9 +14,7 @@
       <pubDate>Fri, 18 May 2018 16:41:08 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/%E7%BB%93%E6%9E%84%E4%BD%93/</guid>
-      <description>&lt;h1 id=&#34;1-结构体的初始化&#34;&gt;1. 结构体的初始化&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;- 初始化中的数据依次赋给结构体中的各个成员.如果初始化中的数据比结构体中的成员多,编译器会报错,但如果只是末尾多个逗号则不算错.如果初始化中的数据比结构体的成员少,未指定的成员将用0来初始化,就像未初始化的全局变量一样.
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description></description>
     </item>
     
     <item>
