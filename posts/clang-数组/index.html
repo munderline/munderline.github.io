@@ -13,7 +13,8 @@
 
 
 <meta name="author" content="安惪坔" />
-<meta name="description" content="1. 一维数组" />
+<meta name="description" content="c数组
+" />
 
 
 
@@ -23,7 +24,7 @@
 
 
 <meta property="og:title" content="数组" />
-<meta property="og:description" content="1. 一维数组" />
+<meta property="og:description" content="c数组" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://munderline.github.io/posts/clang-%E6%95%B0%E7%BB%84/" />
 <meta property="article:published_time" content="2018-05-18T16:41:08+08:00" />
@@ -33,7 +34,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="数组"/>
-<meta name="twitter:description" content="1. 一维数组"/>
+<meta name="twitter:description" content="c数组"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -131,24 +132,21 @@
         </h1>
       </header>
 
-      <article style="margin-top: 2rem;"><h1 id="1-一维数组">1. 一维数组</h1>
-<ul>
-<li>定义
-[存储类型] 数据类型 标识符 [下标] eg: int arr[5]
-<ul>
-<li>初始化
-不初始化: 地址连续,值随机
-全部初始化: int arr[3] = {1, 2, 3}
-部分初始化: 未初始化部分值为0, int arr[5] = {1, 2, 3}
-static: 值全为0, static int arr[4]</li>
-<li>元素引用
-数组名[下标]</li>
-<li>数组名
-数组名是表示地址的常量,也是数组的起始位置.</li>
-<li>数组越界</li>
-</ul>
-</li>
-</ul>
+      <article style="margin-top: 2rem;"><p>c数组</p>
+<h1 id="1-一维数组">1. 一维数组</h1>
+<pre><code>- 定义
+    [存储类型] 数据类型 标识符 [下标] eg: int arr[5]
+- 初始化
+    不初始化: 地址连续,值随机
+    全部初始化: int arr[3] = {1, 2, 3}
+    部分初始化: 未初始化部分值为0, int arr[5] = {1, 2, 3}
+    static: 值全为0, static int arr[4]
+- 元素引用
+    数组名[下标]
+- 数组名
+    数组名是表示地址的常量,也是数组的起始位置.
+- 数组越界
+</code></pre>
 <h1 id="2-二维数组">2. 二维数组</h1>
 <pre><code>- 定义,初始化
     [存储类型] 数组类型 标识符 [行下标] [列下标]

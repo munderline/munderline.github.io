@@ -14,11 +14,7 @@
       <pubDate>Mon, 27 Apr 2020 14:35:00 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/k8s/%E7%BB%84%E4%BB%B6%E5%8E%9F%E7%90%86/</guid>
-      <description>&lt;h1 id=&#34;1-kubernetesapiserver&#34;&gt;1. KubernetesAPIServer&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;(1) 集群管理的API入口
-(2) 资源配额控制的入口
-(3) 提供完备的集群安全机制
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <description></description>
     </item>
     
     <item>

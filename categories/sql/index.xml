@@ -14,7 +14,7 @@
       <pubDate>Sun, 14 Jun 2020 16:01:08 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/pgsql/</guid>
-      <description>&lt;h1 id=&#34;服务器又又又断电了然后-pg-跟着也挂了记录一下自己-docker-部署的不通用&#34;&gt;服务器又又又断电了,然后 PG 跟着也挂了,记录一下(自己 docker 部署的,不通用)&lt;/h1&gt;</description>
+      <description>&lt;p&gt;服务器又又又断电了,然后 PG 跟着也挂了,记录一下(自己 docker 部署的,不通用)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Wed, 10 Jun 2020 11:36:08 +0800</pubDate>
       
       <guid>https://munderline.github.io/posts/mysql%E7%BC%96%E7%A0%81/</guid>
-      <description>&lt;h1 id=&#34;解决-mariadb-中文乱码的问题&#34;&gt;解决 mariadb 中文乱码的问题&lt;/h1&gt;</description>
+      <description>&lt;p&gt;解决 mariadb 中文乱码的问题&lt;/p&gt;</description>
     </item>
     
   </channel>
