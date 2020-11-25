@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://munderline.github.io/imgs/knowledge.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。</copyright>
-    <lastBuildDate>Wed, 09 Sep 2020 15:45:11 +3800</lastBuildDate><atom:link href="https://munderline.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2020 13:31:08 +0800</lastBuildDate><atom:link href="https://munderline.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://munderline.github.io/tags/linux/</link>
+      <pubDate>Wed, 25 Nov 2020 13:31:08 +0800</pubDate>
+      
+      <guid>https://munderline.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>freebsd</title>
       <link>https://munderline.github.io/tags/freebsd/</link>
       <pubDate>Wed, 09 Sep 2020 15:45:11 +3800</pubDate>
       
       <guid>https://munderline.github.io/tags/freebsd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://munderline.github.io/tags/linux/</link>
-      <pubDate>Mon, 24 Aug 2020 16:11:08 +0800</pubDate>
-      
-      <guid>https://munderline.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
